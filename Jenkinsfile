@@ -11,10 +11,10 @@ node('windows ') {
 			echo "Building on branch: ${env.BRANCH_NAME}"
 			if(isUnix()) {
 				sh "chmod +x ${pythonCleanupScript}"
-				sh "${env.WORKSPACE}\\${pythonCleanupScript} com.lmsintl.accent analyses"
+				sh "${env.WORKSPACE}\\${pythonCleanupScript} com.lmsintl.accent blocks"
 			}
 			else{
-				bat "${env.WORKSPACE}\\${pythonCleanupScript} com.lmsintl.accent analyses"
+				bat "${env.WORKSPACE}\\${pythonCleanupScript} com.lmsintl.accent blocks"
 			}
 		}
 	}
