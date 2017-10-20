@@ -15,8 +15,8 @@ NEXUSUSER=os.environ['nexusUsername']
 NEXUSPASS=os.environ['nexusPassword']
 ARTIFACTGROUP ="com.mbeddr"
 ARTIFACTNAME = "platform"  # can be an artifact ID or None. None first searches for artifacts in the group
-ARTIFACTMAXLASTMODIFIED = datetime.datetime.strptime("2017-10-20 12:00:00","%Y-%m-%d %H:%M:%S")
-ARTIFACTMINLASTMODIFIED = datetime.datetime.strptime("2017-10-19 12:00:00","%Y-%m-%d %H:%M:%S")
+ARTIFACTMAXLASTMODIFIED = datetime.datetime.strptime("2017-04-30 12:00:00","%Y-%m-%d %H:%M:%S")
+ARTIFACTMINLASTMODIFIED = datetime.datetime.strptime("2016-10-01 12:00:00","%Y-%m-%d %H:%M:%S")
 
 # generates URL based on constants and artifactname, calls Nexus and returns an ElementTree
 def get_nexus_artifact_version_listing(artifactname):
