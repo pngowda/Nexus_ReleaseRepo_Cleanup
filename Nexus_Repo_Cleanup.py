@@ -8,7 +8,7 @@ import getpass
 
 NEXUSHOST = "projects.itemis.de"
 USE_SSL = True
-NEXUSREPOSITORY = "mbeddr.core"
+NEXUSREPOSITORY = "mbeddr"
 NEXUSBASEURL = "/nexus/service/local/repositories/"
 
 NEXUSUSER=os.environ['nexusUsername']
