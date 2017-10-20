@@ -1,5 +1,5 @@
 node('master') {
-	def pythonCleanupScript     = '/Nexus_Repo_Cleanup.py'
+	def pythonCleanupScript     = 'Nexus_Repo_Cleanup.py'
 	def buildWrapper  = './code/vms/gradlew'
 	withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'id_nex',
     usernameVariable: 'nexusUsername', passwordVariable: 'nexusPassword']])
