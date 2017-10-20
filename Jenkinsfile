@@ -11,10 +11,10 @@ node('master') {
 			echo "Building on branch: ${env.BRANCH_NAME}"
 			if(isUnix()) {
 				sh "chmod +x ${pythonCleanupScript}"
-				sh "python ${pythonCleanupScript}"
+				sh "C:\\Python27\\python.exe ${pythonCleanupScript}"
 			}
 			else{
-				bat "python ${pythonCleanupScript}"
+				bat "C:\\Python27\\python.exe ${pythonCleanupScript}"
 			}
 		}
 	}
