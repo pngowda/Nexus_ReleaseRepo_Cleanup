@@ -11,7 +11,6 @@ USE_SSL = True
 NEXUSREPOSITORY = "mbeddr.core"
 NEXUSBASEURL = "/nexus/service/local/repositories/"
 
-print "os.environ['nexusUsername']"
 NEXUSUSER=os.environ['nexusUsername']
 NEXUSPASS=os.environ['nexusPassword']
 ARTIFACTGROUP ="com.mbeddr"
