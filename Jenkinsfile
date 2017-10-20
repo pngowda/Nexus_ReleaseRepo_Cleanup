@@ -1,5 +1,5 @@
 node('windows ') {
-	def pythonCleanupScript     = './Nexus_Repo_Cleanup/Nexus_Repo_Cleanup.exe'
+	def pythonCleanupScript     = "Nexus_Repo_Cleanup\\Nexus_Repo_Cleanup.exe"
 	def buildWrapper  = './code/vms/gradlew'
 	withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'nex_id',
     usernameVariable: 'nexusUsername', passwordVariable: 'nexusPassword']])
@@ -11,10 +11,10 @@ node('windows ') {
 			echo "Building on branch: ${env.BRANCH_NAME}"
 			if(isUnix()) {
 				sh "chmod +x ${pythonCleanupScript}"
-				sh "${pythonCleanupScript}"
+				sh "${env.WORKSPACE}\\${pythonCleanupScript}"
 			}
 			else{
-				bat "${pythonCleanupScript}"
+				bat "${env.WORKSPACE}\\${pythonCleanupScript}"
 			}
 		}
 	}
