@@ -15,7 +15,7 @@ NEXUSUSER=os.environ['nexusUsername']
 NEXUSPASS=os.environ['nexusPassword']
 ARTIFACTGROUP ="com.mbeddr"
 ARTIFACTNAME = "platform"  # can be an artifact ID or None. None first searches for artifacts in the group
-ARTIFACTMAXLASTMODIFIED = datetime.datetime.strptime("2017-06-30 12:00:00","%Y-%m-%d %H:%M:%S")
+ARTIFACTMAXLASTMODIFIED = datetime.datetime.strptime("2017-05-30 12:00:00","%Y-%m-%d %H:%M:%S")
 ARTIFACTMINLASTMODIFIED = datetime.datetime.strptime("2016-12-01 12:00:00","%Y-%m-%d %H:%M:%S")
 
 # generates URL based on constants and artifactname, calls Nexus and returns an ElementTree
@@ -121,7 +121,7 @@ def remove_artifacts_from_nexus():
                     print
                 else:
                     print "Removing artifacts"+ content_item.find("./text").text
-                    #remove_artifact(ARTIFACTGROUP, ARTIFACTNAME, content_item.find("./text").text)
+                    remove_artifact(ARTIFACTGROUP, ARTIFACTNAME, content_item.find("./text").text)
     else:
         artifact_names = get_nexus_artifact_names()
         for artifact_name in artifact_names.findall("./data/content-item"):
@@ -138,7 +138,7 @@ def remove_artifacts_from_nexus():
                         print
                     else:
                         print "Removing artifacts" + content_item.find("./text").text
-                        #remove_artifact(ARTIFACTGROUP, artifactname, content_item.find("./text").text)
+                        remove_artifact(ARTIFACTGROUP, artifactname, content_item.find("./text").text)
 
 NEXUSUSERNAME = NEXUSUSER
 NEXUSPASSWORD = NEXUSPASS
