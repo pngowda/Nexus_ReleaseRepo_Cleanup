@@ -11,10 +11,10 @@ node('windows ') {
 			echo "Building on branch: ${env.BRANCH_NAME}"
 			if(isUnix()) {
 				sh "chmod +x ${pythonCleanupScript}"
-				sh "${env.WORKSPACE}\\${pythonCleanupScript} siemens_esd com.lmsintl.accent coverage"
+				sh "${env.WORKSPACE}\\${pythonCleanupScript} siemens_esd com.lmsintl.accent allScriptsWithoutImporter"
 			}
 			else{
-				bat "${env.WORKSPACE}\\${pythonCleanupScript} siemens_esd com.lmsintl.accent coverage"
+				bat "${env.WORKSPACE}\\${pythonCleanupScript} siemens_esd com.lmsintl.accent allScriptsWithoutImporter"
 			}
 		}
 	}
