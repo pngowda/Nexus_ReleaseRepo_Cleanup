@@ -7,7 +7,7 @@ import base64
 import getpass
 import sys, getopt
 
-NEXUSHOST = "projects.itemis.de"
+NEXUSHOST = "hostname here"
 USE_SSL = True
 NEXUSREPOSITORY = sys.argv[1]
 NEXUSBASEURL = "/nexus/service/local/repositories/"
